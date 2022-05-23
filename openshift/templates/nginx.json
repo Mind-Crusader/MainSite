@@ -2,7 +2,7 @@
   "kind": "Template",
   "apiVersion": "template.openshift.io/v1",
   "metadata": {
-    "name": "nginx-example",
+    "name": "homepage",
     "annotations": {
       "openshift.io/display-name": "Nginx HTTP server and a reverse proxy",
       "description": "An example Nginx HTTP server and a reverse proxy (nginx) application that serves static content. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nginx-ex/blob/master/README.md.",
@@ -16,7 +16,7 @@
   },
   "message": "The following service(s) have been created in your project: ${NAME}.\n\nFor more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nginx-ex/blob/master/README.md.",
   "labels": {
-    "template": "nginx-example"
+    "template": "homepage"
   },
   "objects": [
     {
@@ -145,7 +145,7 @@
             "imageChangeParams": {
               "automatic": true,
               "containerNames": [
-                "nginx-example"
+                "homepage"
               ],
               "from": {
                 "kind": "ImageStreamTag",
@@ -171,7 +171,7 @@
           "spec": {
             "containers": [
               {
-                "name": "nginx-example",
+                "name": "homepage",
                 "image": " ",
                 "ports": [
                   {
@@ -214,7 +214,7 @@
       "displayName": "Name",
       "description": "The name assigned to all of the frontend objects defined in this template.",
       "required": true,
-      "value": "nginx-example"
+      "value": "homepage"
     },
     {
       "name": "NAMESPACE",
@@ -228,7 +228,7 @@
       "displayName": "NGINX Version",
       "description": "Version of NGINX image to be used (1.20-el8 by default).",
       "required": true,
-      "value": "1.20-el8"
+      "value": "1.20"
     },
     {
       "name": "MEMORY_LIMIT",
@@ -242,7 +242,7 @@
       "displayName": "Git Repository URL",
       "description": "The URL of the repository with your application source code.",
       "required": true,
-      "value": "https://github.com/sclorg/nginx-ex.git"
+      "value": "https://github.com/mind-crusader/mainsite.git"
     },
     {
       "name": "SOURCE_REPOSITORY_REF",
